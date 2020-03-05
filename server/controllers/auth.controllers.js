@@ -175,10 +175,10 @@ exports.checkAuth = async (req, res, next) => {
 // @route GET api/auth/logOut
 // @desc Logs User Out
 // @access Public
-// exports.logOut = async (req, res, next) => {
-//   res.clearCookie("access_token");
-//   res.json({ success: true });
-// };
+exports.logOut = async (req, res, next) => {
+  res.clearCookie("access_token");
+  res.json({ success: true });
+};
 
 async function generateVerificationToken() {
   try {
